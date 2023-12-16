@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: hsl(218, 23%, 16%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  background-color: hsl(217, 19%, 24%);
+  padding: 20px;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 15px;
+  position: relative;
+}
+
+#adviceNumber {
+  color: hsl(150, 100%, 66%);
+  font-size: 50%;
+  letter-spacing: 4px;
+}
+
+#advice {
+  font-size: 130%;
+  padding: 0 10px;
+  text-align: center;
+  color: hsl(193, 38%, 86%);
+}
+
+.diceClass {
+  position: absolute;
+  background-color: hsl(150, 100%, 66%);
+  padding: 15px;
+  border-radius: 50%;
+  bottom: -12%;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+  display: flex;
+}
+
+.diceClass:hover {
+  box-shadow: 0px 5px 30px hsl(150, 100%, 66%);
+}
+
+.color {
+  color: hsl(193, 38%, 86%);
+  color: hsl(150, 100%, 66%);
+  color: hsl(217, 19%, 38%);
+  color: hsl(217, 19%, 24%);
+  color: hsl(218, 23%, 16%);
+}
+
+#loader {
+  display: none;
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid hsl(150, 100%, 66%);
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 0.5s linear infinite; /* Safari */
+  animation: spin 0.5s linear infinite;
+  box-shadow: 0px 5px 30px hsl(150, 100%, 66%);
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 670px) {
+  .card {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 570px) {
+  .card {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 410px) {
+  .card {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 75vw;
+  }
+}
